@@ -15,4 +15,6 @@
 
 class Food < ApplicationRecord
   validates :name, :amount_g, presence: true
+
+  has_many :meal_foods
 end

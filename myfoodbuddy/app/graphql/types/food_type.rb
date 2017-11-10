@@ -10,4 +10,5 @@ Types::FoodType = GraphQL::ObjectType.define do
   field :protein, types.Int
   field :carbs, types.Int
   field :fat, types.Int
+  field :meal_foods, -> { !types[Types::MealFoodType] }
 end
