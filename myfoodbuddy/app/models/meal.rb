@@ -14,6 +14,7 @@ class Meal < ApplicationRecord
   before_create :ensure_meal_time
 
   has_many :meal_foods
+  has_many :foods, through: :meal_foods
 
   def ensure_meal_time
     self.meal_time ||= Time.now
