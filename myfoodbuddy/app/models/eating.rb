@@ -1,19 +1,17 @@
 # == Schema Information
 #
-# Table name: chowdowns
+# Table name: eatings
 #
 #  id         :integer          not null, primary key
 #  food_id    :integer          not null
-#  chow_time  :datetime
+#  meal_id    :integer          not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
-class Chowdown < ApplicationRecord
-  before_create :set_chow_time_to_now
+class Eating < ApplicationRecord
+  validates :food_id, :meal_id, presence: true
 
-  def set_chow_time_to_now
-    self.chow_time ||= Time.now
-  end
-
+  belongs_to :food
+  belongs_to :meal
 end

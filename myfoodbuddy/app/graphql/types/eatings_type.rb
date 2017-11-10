@@ -1,9 +1,9 @@
 # defines a new GraphQL type
-Types::ChowdownType = GraphQL::ObjectType.define do
-  name 'Chowdown'
+Types::EatingsType = GraphQL::ObjectType.define do
+  name 'Eatings'
 
   # it has the following fields
   field :id, !types.ID
   field :food_id, !types.Int
-  field :chow_time, !Types::DateTimeType
+  field :meal_id, !types.Int
 end
