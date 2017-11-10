@@ -10,4 +10,5 @@ Types::QueryType = GraphQL::ObjectType.define do
   field :allMeals, !types[Types::MealType] do
     resolve -> (obj, args, ctx) { Meal.all }
   end
+  
 end

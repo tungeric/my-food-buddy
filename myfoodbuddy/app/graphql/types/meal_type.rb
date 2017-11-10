@@ -6,6 +6,4 @@ Types::MealType = GraphQL::ObjectType.define do
   field :id, !types.ID
   field :name, types.String
   field :meal_time, !Types::DateTimeType
-  field :eatings, -> { Types::EatingsType }
-  field :food, -> { Types::FoodType }
 end

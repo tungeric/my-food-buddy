@@ -13,9 +13,6 @@ class Meal < ApplicationRecord
   validates :name, presence: true
   before_create :ensure_meal_time
 
-  has_many :eatings
-  has_many :foods, :through => :eatings
-
   def ensure_meal_time
     self.meal_time ||= Time.now
   end
