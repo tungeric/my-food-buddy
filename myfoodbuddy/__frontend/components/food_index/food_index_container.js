@@ -6,6 +6,7 @@ import { getAllFoods } from '../../actions/foodActions';
 
 const mapStateToProps = (state, props) => {
   return {
+    foods: state.foods
   };
 };
 

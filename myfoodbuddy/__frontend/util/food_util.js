@@ -1,5 +1,5 @@
 import { request } from 'graphql-request';
-const URL = "http://localhost:3000/graphiql";
+const URL = "http://localhost:3000/graphql";
 
 const getFoodsQuery = `{
   allFoods {

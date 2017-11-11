@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
 
-import entitiesReducer from './entitiesReducer';
+import foodReducer from './foodReducer';
 
 const rootReducer = combineReducers({
-  entities: entitiesReducer,
+  food: foodReducer,
 });
 
 export default rootReducer;

@@ -15,5 +15,6 @@ export const receiveFoods = (foods) => ({
 
 export const getAllFoods = () => dispatch => {
   return FoodUtil.getAllFoods()
+    // .then( response => console.log(response));
     .then ( response => dispatch(receiveFoods(response)));
 };

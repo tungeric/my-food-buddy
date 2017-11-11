@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom';
 class FoodIndex extends React.Component {
   constructor(props) {
     super(props);
+    this.state={
+      food: this.props.food
+    };
   }
 
   componentDidMount() {
@@ -12,11 +15,12 @@ class FoodIndex extends React.Component {
 
   render () {
     console.log(this.props);
+    const { foods } = this.props;
+    console.log(foods);
+
     return(
       <div>
-        <h1>
-          hi
-        </h1>
+        
       </div>
     );
   }
